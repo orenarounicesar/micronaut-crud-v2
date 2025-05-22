@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: crud-personas
+
+datasources:
+  default:
+    url: ${DATASOURCE_URL:`jdbc:mysql://localhost:3306/personas_db`}
+    username: ${DATASOURCE_USERNAME:root}
+    password: ${DATASOURCE_PASSWORD:password}
+    driverClassName: com.mysql.cj.jdbc.Driver
+    dialect: MYSQL
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
