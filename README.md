@@ -3,8 +3,31 @@
 Variables de entorno
 
 DATASOURCE_URL: cadena del tipo jdbc:mysql://HOST:PUERTO/NOMBRE_BASE_DE_DATOS
+
 DATASOURCE_USERNAME: Usuario de Conexión a la base de datos
+
 DATASOURCE_PASSWORD: Contraseña de usuario de base de datos
+
+
+Curl de ejemplo
+
+- curl -X POST http://HOST:PORT/DATABASE \
+-H "Content-Type: application/json" \
+-d '{"nombre": "Juan", "apellido": "Pérez", "edad": 30}'
+
+
+- curl -X GET http://HOST:PORT/DATABASE/1
+
+
+- curl -X PUT http://HOST:PORT/DATABASE/1 \
+-H "Content-Type: application/json" \
+-d '{"nombre": "Juan Carlos", "apellido": "Pérez", "edad": 31}'
+
+
+- curl -X DELETE http://HOST:PORT/DATABASE/1
+
+
+
 
 Ejemplo de comando de creación de la imagen de docker
 - docker build -t micronaut-crud-v2 .
