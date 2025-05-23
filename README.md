@@ -1,6 +1,10 @@
 # micronaut-crud-v2
 
-Variables de entorno
+REPO de código fuente
+- https://github.com/orenarounicesar/micronaut-crud-v2.git
+
+
+# Variables de entorno
 
 DATASOURCE_URL: cadena del tipo jdbc:mysql://HOST:PUERTO/NOMBRE_BASE_DE_DATOS
 
@@ -9,7 +13,7 @@ DATASOURCE_USERNAME: Usuario de Conexión a la base de datos
 DATASOURCE_PASSWORD: Contraseña de usuario de base de datos
 
 
-Curl de ejemplo
+# Curl de ejemplo
 
 - curl -X POST http://HOST:PORT/DATABASE \
 -H "Content-Type: application/json" \
@@ -27,12 +31,10 @@ Curl de ejemplo
 - curl -X DELETE http://HOST:PORT/DATABASE/1
 
 
-
-
-Ejemplo de comando de creación de la imagen de docker
+# Ejemplo de comando de creación de la imagen de docker
 - docker build -t micronaut-crud-v2 .
 
-Ejemplo de comando de ejecución de contenedor
+# Ejemplo de comando de ejecución de contenedor
 docker run -d -e DATASOURCE_URL=jdbc:mysql://10.10.1.3:3311/esp -e DATASOURCE_USERNAME=root -e DATASOURCE_PASSWORD=root -p 8080:8080 --name micronaut-crud-v2 micronaut-crud-v2
 
 
