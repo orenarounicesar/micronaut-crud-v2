@@ -15,20 +15,20 @@ DATASOURCE_PASSWORD: Contraseña de usuario de base de datos
 
 # Curl de ejemplo
 
-- curl -X POST http://HOST:PORT/DATABASE \
+- curl -X POST http://HOST:PORT/personas \
 -H "Content-Type: application/json" \
 -d '{"nombre": "Juan", "apellido": "Pérez", "edad": 30}'
 
 
-- curl -X GET http://HOST:PORT/DATABASE/1
+- curl -X GET http://HOST:PORT/personas/1
 
 
-- curl -X PUT http://HOST:PORT/DATABASE/1 \
+- curl -X PUT http://HOST:PORT/personas/1 \
 -H "Content-Type: application/json" \
 -d '{"nombre": "Juan Carlos", "apellido": "Pérez", "edad": 31}'
 
 
-- curl -X DELETE http://HOST:PORT/DATABASE/1
+- curl -X DELETE http://HOST:PORT/personas/1
 
 
 # Ejemplo de comando de creación de la imagen de docker
